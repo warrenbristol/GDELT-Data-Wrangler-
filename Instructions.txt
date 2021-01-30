@@ -1,0 +1,45 @@
+
+This Document will outline the YouTube Tutorial Step-by-Step
+-------------------------------------------------------------
+
+1) Visit the GDELT Downloads Page and Select you CAMEO Data: https://www.gdeltproject.org/#downloading
+
+1a) Download data based on date and time of your area of interest and save your .csv files from the GDELT Project
+
+1b) This .csv data is not easily parsed-up by regular interpreters like excel or notepad++
+	-That's because GDELT strongly encourages the user to use Google Big Query to download and analyze their data
+	-Google Big Query Costs Money and the GDELT data does not provide nodes and edges for actual network analysis
+	-For this reason, we will need to IMPORT our files into Google Sheets, then use the split text to columns feature
+	-The way GDELT formats their .csv files makes the split text to columns function on other interpreters not work well with the .csv data
+
+
+
+-------------------------------------------------------------
+
+2) Import your downloaded .csv files into Google Sheets
+
+2a) Highlight and select all of column A 
+
+2b) Then go to the data tab and select split tect to columns feature
+	-leave the setting as deafault, as this allows google to interpret the GDELT format 
+
+2c) Download your parsed spreadsheets as .csv files 
+	-in the next section, we will use the python script to concatenate and add fields to your GDELT data
+-------------------------------------------------------------
+
+3) Rename your .csv files that you just parsed in your folder in a numerically formatted order
+	-for instance you can call your files GDELT_Cleaned_1, GDELT_Cleaned_2, GDELT_Cleaned_3 ....
+	-This will allow us to concactenate large sums of GDELT data and assign a header to the concactenated table
+
+3a) Set your paths to your machine's configuration and where you stored your parsed GDELT data
+
+3b) Set your paths for exporting dataframes to csv arguments to your desired folder 
+-------------------------------------------------------------
+
+4) Geocode Accordingly 
+
+4a) Geodessy is important and you want to pick a CRS,PCS that preserves shape (i.e. WGS84, Web Mercator) 
+	-This will ensure that your data is being geocoded in coordinate system that is friendly to both network analysis and geocoding 
+-------------------------------------------------------------
+
+5) View the Youtube Tutorial Here: 
